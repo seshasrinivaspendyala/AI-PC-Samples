@@ -155,8 +155,8 @@ Once you've opened the terminal, proceed with the following steps:
    jupyter lab
    ```
    - Open the [AI Travel Agent notebook](./AI_Travel_Agent.ipynb) and [Agent using Custom tools notebook](./LLM_Agent_with_custom_tools.ipynb) in the Jupyter Lab.
-   - To select the `gpu_llmsycl` kernel in the Jupyter Lab, go to the kernel menu in the top-right corner of the notebook interface and choose `gpu_llmsycl` from the available kernels list
-   - Run the code cells one by one in the notebook.
+   - To select the `gpu_llmsycl` kernel in the Jupyter Lab, go to the kernel menu in the top-right corner of the notebook interface and choose `gpu_llmsycl` from the available kernels list.
+   - Run the code cells one by one in the notebook.\
    **IMPORTANT:** Ensure that you have initialized the oneAPI environment (refer to step 2) before launching the Jupyter Lab.
 
 
