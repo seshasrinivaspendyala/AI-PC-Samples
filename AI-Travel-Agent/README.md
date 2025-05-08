@@ -107,20 +107,20 @@ Once you've opened the terminal, proceed with the following steps:
    CMAKE_ARGS="-DGGML_SYCL=on -DCMAKE_C_COMPILER=icx -DCMAKE_CXX_COMPILER=icpx" pip install llama-cpp-python==0.3.8 -U --force --no-cache-dir --verbose
    ```
 4. **Navigate to the AI-Travel-Agent directory and install the required dependencies**\
-   Replace `</path/to/AI-Travel-Agent/folder>` with the actual path to your AI-Travel-Agent folder. Then, run the following command to navigate to the directory and install the required pip packages:
+   Replace `</path/to/AI-Travel-Agent/folder>` with the actual path to your AI-Travel-Agent folder. Then, run the following command to navigate to the directory and install the required pip packages.
    ```
    cd </path/to/AI-Travel-Agent/folder>
    ```
    ```
    pip install -r requirements.txt
    ```
-5. **Install an ipykernel to select the gpu_llmsycl environment**\
+5. **Install an ipykernel to select the gpu_llmsycl environment**
    ```
    python -m ipykernel install --user --name=gpu_llmsycl
    ```
 6. **Log in to Hugging Face, generate a token, and download the GGUF models using huggingface-cli**\
    `huggingface-cli` lets you interact directly with the Hugging Face Hub from a terminal. Log in to [Huggingface](https://huggingface.co/) with your credentials. You need a [User Access Token](https://huggingface.co/docs/hub/security-tokens) from your [Settings page](https://huggingface.co/settings/tokens). The User Access Token is used to authenticate your identity to the Hub.\
-   Once you have your token, run the following command in your terminal:
+   Once you have your token, run the following command in your terminal.
    ```
    huggingface-cli login
    ```
