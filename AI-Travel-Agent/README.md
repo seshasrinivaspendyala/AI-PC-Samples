@@ -8,7 +8,7 @@ This section of AI PC Samples showcases how to deploy local LLM agents using the
 2. Installing Prerequisites
    - Windows
    - Linux
-3. Setting up the environment and LlamaCPP-python GPU backend
+3. Setting up the environment and Llamacpp Python GPU backend
 4. Sample execution on the AI PC GPU
 
 ## AI Travel Agent Workflow
@@ -26,7 +26,7 @@ The following software is to be installed before setting up of Llamacpp-python S
 
 3. **Microsoft Visual Studio 2022 community version**\
    Download and install VS 2022 community from [here](https://visualstudio.microsoft.com/downloads/)\
-   **IMPORTANT:** Please select "Desktop Development with C++" option while installing Microsoft Visual Studio.
+   **IMPORTANT:** Please select `Desktop Development with C++` option while installing Microsoft Visual Studio.
 
 4. **Git for Windows**\
    Download and install Git from [here](https://git-scm.com/downloads/win)
@@ -47,7 +47,7 @@ The following software is to be installed before setting up of Llamacpp-python S
    wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
    bash Miniforge3-$(uname)-$(uname -m).sh
    ```
-   Replace </path/to/miniforge3/bin/folder> with the actual path to your Miniforge bin folder path. Then, run the following command to navigate to the directory. 
+   Replace `</path/to/miniforge3/bin/folder>` with the actual path to your Miniforge bin folder path. Then, run the following command to navigate to the directory. 
    ```
    cd </path/to/miniforge3/bin/folder>
    ```
@@ -70,10 +70,10 @@ The following software is to be installed before setting up of Llamacpp-python S
    sudo dnf update && sudo dnf -y install cmake git
    ```
 
-## Setting up environment and LlamaCPP-python GPU backend
+## Setting up environment and Llamacpp Python GPU backend
 
-For Windows: Open the Miniforge Prompt as an administrator by right-clicking the terminal icon and selecting Run as administrator.\
-For Linux: Open a new terminal window by right-clicking the terminal and selecting New Window.
+For Windows: Open the Miniforge Prompt as an administrator by right-clicking the terminal icon and selecting `Run as administrator`.\
+For Linux: Open a new terminal window by right-clicking the terminal and selecting `New Window`.
 
 Once you've opened the terminal, proceed with the following steps:
 
@@ -91,7 +91,7 @@ Once you've opened the terminal, proceed with the following steps:
    ```
    source /opt/intel/oneapi/setvars.sh --force
    ```
-3. **Set the environment variables and install Llamacpp-Python bindings**\
+3. **Set the environment variables and install Llamacpp Python bindings**\
    On Windows:
    ```
    set CMAKE_GENERATOR=Ninja
@@ -107,7 +107,7 @@ Once you've opened the terminal, proceed with the following steps:
    CMAKE_ARGS="-DGGML_SYCL=on -DCMAKE_C_COMPILER=icx -DCMAKE_CXX_COMPILER=icpx" pip install llama-cpp-python==0.3.8 -U --force --no-cache-dir --verbose
    ```
 4. **Navigate to the AI-Travel-Agent directory and install the required dependencies**\
-   Replace </path/to/AI-Travel-Agent/folder> with the actual path to your AI-Travel-Agent folder. Then, run the following command to navigate to the directory and install the required pip packages:
+   Replace `</path/to/AI-Travel-Agent/folder>` with the actual path to your AI-Travel-Agent folder. Then, run the following command to navigate to the directory and install the required pip packages:
    ```
    cd </path/to/AI-Travel-Agent/folder>
    ```
@@ -118,7 +118,7 @@ Once you've opened the terminal, proceed with the following steps:
    ```
    python -m ipykernel install --user --name=gpu_llmsycl
    ```
-6. **Log in to Hugging Face, generate a token, and download the GGUF models using huggingface-cli**
+6. **Log in to Hugging Face, generate a token, and download the GGUF models using huggingface-cli**\
    huggingface-cli lets you interact directly with the Hugging Face Hub from a terminal. Log in to [Huggingface](https://huggingface.co/) with your credentials. You need a [User Access Token](https://huggingface.co/docs/hub/security-tokens) from your [Settings page](https://huggingface.co/settings/tokens). The User Access Token is used to authenticate your identity to the Hub. Once you have your token, run the following command in your terminal:
    ```
    huggingface-cli login
@@ -137,29 +137,29 @@ Once you've opened the terminal, proceed with the following steps:
     - [Amadeus Toolkit](https://python.langchain.com/docs/integrations/tools/amadeus/): This toolkit allows agents to make travel-related decisions, especially for searching trips with flights.
         - LangChain reference: [AmadeusToolkit](https://python.langchain.com/api_reference/community/agent_toolkits/langchain_community.agent_toolkits.amadeus.toolkit.AmadeusToolkit.html)
         - To get started, register for Amadeus Self-Service APIs [here](https://developers.amadeus.com/get-started/get-started-with-self-service-apis-335) and generate your API keys.
-        - In the .env file, set AMADEUS_CLIENT_ID to your Amadeus API Key, and AMADEUS_CLIENT_SECRET to your API Secret from the Amadeus website
+        - In the .env file, set `AMADEUS_CLIENT_ID` to your Amadeus `API Key`, and `AMADEUS_CLIENT_SECRET` to your `API Secret` from the Amadeus website.
 
     - [Google Serper](https://python.langchain.com/docs/integrations/tools/google_serper/): This tool is used by the GoogleSerperAPIWrapper to perform web searches using Google's results.
         - LangChain reference: [GoogleSerperAPIWrapper](https://python.langchain.com/api_reference/community/utilities/langchain_community.utilities.google_serper.GoogleSerperAPIWrapper.html)
         - Generate your API key from [here](https://serper.dev)
-        - Add the key to your .env file as SERPER_API_KEY
+        - Add the key to your .env file as `SERPER_API_KEY`.
     
     - [SerpAPI](https://python.langchain.com/docs/integrations/providers/serpapi/): This tool provides multi-engine support for real-time search result extraction.
         - LangChain reference: [SerpAPIWrapper](https://python.langchain.com/api_reference/community/utilities/langchain_community.utilities.serpapi.SerpAPIWrapper.html)
         - Generate an API key from [here](https://serpapi.com/).
-        - Add the key to your .env file as SERPAPI_API_KEY
+        - Add the key to your .env file as `SERPAPI_API_KEY`.
 
-9. **Launch Jupyter Lab and Run the notebook**
+8. **Launch Jupyter Lab and Run the notebook**
    ```
    jupyter lab
    ```
    - Open the [AI Travel Agent notebook](./AI_Travel_Agent.ipynb) and [Agent using Custom tools notebook](./LLM_Agent_with_custom_tools.ipynb) in the Jupyter Lab.
-   - To select the gpu_llmsycl kernel in the Jupyter Lab, go to the kernel menu in the top-right corner of the notebook interface and choose gpu_llmsycl from the available kernels list
+   - To select the `gpu_llmsycl` kernel in the Jupyter Lab, go to the kernel menu in the top-right corner of the notebook interface and choose `gpu_llmsycl` from the available kernels list
    - Run the code cells one by one in the notebook.
    **IMPORTANT:** Ensure that you have initialized the oneAPI environment (refer to step 2) before launching the Jupyter Lab.
 
 
-10. **Run the Streamlit file**
+9. **Run the Streamlit file**
    - You can run the Streamlit file using the below command in the Jupyter terminal or from your Miniforge terminal(Windows) or Terminal(Linux) in the gpu_llmsycl conda environment
    ```
    streamlit run AI_Travel_Agent_streamlit.py
