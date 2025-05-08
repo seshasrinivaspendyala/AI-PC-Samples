@@ -72,8 +72,8 @@ The following software is to be installed before setting up of Llamacpp-python S
 
 ## Setting up environment and LlamaCPP-python GPU backend
 
-For Windows: Open the Miniforge Prompt as an administrator by right-clicking the terminal icon and selecting Run as administrator.
-For Linux: Open a new terminal window by right-clicking the terminal and selecting New Window.
+For Windows: Open the Miniforge Prompt as an administrator by right-clicking the terminal icon and selecting Run as administrator.\
+For Linux: Open a new terminal window by right-clicking the terminal and selecting New Window.\
 
 Once you've opened the terminal, proceed with the following steps:
 
