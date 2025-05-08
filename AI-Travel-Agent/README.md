@@ -119,8 +119,9 @@ Once you've opened the terminal, proceed with the following steps:
    python -m ipykernel install --user --name=gpu_llmsycl
    ```
 6. **Log in to Hugging Face, generate a token, and download the GGUF models using huggingface-cli**\
-   huggingface-cli lets you interact directly with the Hugging Face Hub from a terminal. Log in to [Huggingface](https://huggingface.co/) with your credentials. You need a [User Access Token](https://huggingface.co/docs/hub/security-tokens) from your [Settings page](https://huggingface.co/settings/tokens). The User Access Token is used to authenticate your identity to the Hub.\
-   Once you have your token, run the following command in your terminal:
+   - `huggingface-cli` lets you interact directly with the Hugging Face Hub from a terminal.
+   - Log in to [Huggingface](https://huggingface.co/) with your credentials. You need a [User Access Token](https://huggingface.co/docs/hub/security-tokens) from your [Settings page](https://huggingface.co/settings/tokens). The User Access Token is used to authenticate your identity to the Hub.
+   - Once you have your token, run the following command in your terminal:
    ```
    huggingface-cli login
    ```
