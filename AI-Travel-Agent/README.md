@@ -119,7 +119,8 @@ Once you've opened the terminal, proceed with the following steps:
    python -m ipykernel install --user --name=gpu_llmsycl
    ```
 6. **Log in to Hugging Face, generate a token, and download the GGUF models using huggingface-cli**\
-   huggingface-cli lets you interact directly with the Hugging Face Hub from a terminal. Log in to [Huggingface](https://huggingface.co/) with your credentials. You need a [User Access Token](https://huggingface.co/docs/hub/security-tokens) from your [Settings page](https://huggingface.co/settings/tokens). The User Access Token is used to authenticate your identity to the Hub. Once you have your token, run the following command in your terminal:
+   huggingface-cli lets you interact directly with the Hugging Face Hub from a terminal. Log in to [Huggingface](https://huggingface.co/) with your credentials. You need a [User Access Token](https://huggingface.co/docs/hub/security-tokens) from your [Settings page](https://huggingface.co/settings/tokens). The User Access Token is used to authenticate your identity to the Hub.\
+   Once you have your token, run the following command in your terminal:
    ```
    huggingface-cli login
    ```
@@ -133,7 +134,7 @@ Once you've opened the terminal, proceed with the following steps:
    huggingface-cli download <repo_id> <filename>
    ```
 
-7. **Create and add your API keys to the .env file**\
+8. **Create and add your API keys to the .env file**\
     - [Amadeus Toolkit](https://python.langchain.com/docs/integrations/tools/amadeus/): This toolkit allows agents to make travel-related decisions, especially for searching trips with flights.
         - LangChain reference: [AmadeusToolkit](https://python.langchain.com/api_reference/community/agent_toolkits/langchain_community.agent_toolkits.amadeus.toolkit.AmadeusToolkit.html)
         - To get started, register for Amadeus Self-Service APIs [here](https://developers.amadeus.com/get-started/get-started-with-self-service-apis-335) and generate your API keys.
@@ -149,7 +150,7 @@ Once you've opened the terminal, proceed with the following steps:
         - Generate an API key from [here](https://serpapi.com/).
         - Add the key to your .env file as `SERPAPI_API_KEY`.
 
-8. **Launch Jupyter Lab and Run the notebook**\
+9. **Launch Jupyter Lab and Run the notebook**\
    ```
    jupyter lab
    ```
@@ -159,7 +160,7 @@ Once you've opened the terminal, proceed with the following steps:
    **IMPORTANT:** Ensure that you have initialized the oneAPI environment (refer to step 2) before launching the Jupyter Lab.
 
 
-9. **Run the Streamlit file**\
+10. **Run the Streamlit file**\
    - You can run the Streamlit file using the below command in the Jupyter terminal or from your Miniforge terminal(Windows) or Terminal(Linux) in the gpu_llmsycl conda environment.
    ```
    streamlit run AI_Travel_Agent_streamlit.py
